@@ -7,7 +7,7 @@ export default class App extends React.Component {
     return (
       <View>
         <Text>Open up App.js to start working on your app!!!</Text>
-        <Header title = "Pessoas" />
+        <Header title = "Pessoas2" />
       </View>
     );
   }
