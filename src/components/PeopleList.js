@@ -1,17 +1,18 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import PeopleListItem from './PeopleListItem';
 
-const PeopleList = (props) => ({
-    
-});
+const PeopleList = props => {
+  const { peoples } = props;
 
-renderList() {
-    const textElements = this.state.peoples.map(people => {
-       const {first} = people.name;
-       return <Text key= {first}>{first}</Text>
-   });
- 
-    return  textElements;
-  } 
+  const items = peoples.map(people => {
+    return <PeopleListItem key = {people.name.first} people = {people} />
+  });
 
+  return (
+    <View>
+      {items}
+    </View>
+  );
+};
 export default PeopleList;
